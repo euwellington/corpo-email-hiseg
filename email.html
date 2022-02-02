@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f2f2f2;
+        }
+        .contain-body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background: white;
+        }
+        .header {
+            background: #004C95;
+            padding: 50px;
+            box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+        }
+        .logo {
+            height: 60px;
+            margin-top: 40px;
+        }
+        .title {
+            font-size: 24pt;
+            color: #fff;
+            margin-top: 40px;
+            font-weight: 400;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .user {
+            font-size: 11pt;
+            color: rgba(0,0,0,0.7);
+            text-align: center;
+            font-weight: 700;
+        }
+        .content {
+            padding: 40px;
+            width: 30vw;
+        }
+        .bold {
+            font-weight: 700;
+            color: rgba(0,0,0,0.7);
+        }
+        .name {
+            color: #004C95;
+            font-size: 20pt;
+            font-weight: 600;
+        }
+        .content-text {
+            color: rgba(0,0,0,0.7);
+            font-size: 12pt;
+            font-weight: 450;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .code {
+            margin: 80px;
+        }
+        .code-text {
+            text-align: center;
+            color: #004C95;
+            font-size: 27pt;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(0,0,0,0.0800);
+            padding: 10px;
+        }
+        .footer {
+            padding: 40px;
+            
+        }
+        .thanks {
+            font-size: 20pt;
+            color: rgba(0,0,0,0.9);
+            font-weight: 700;
+        }
+        .about {
+            margin-top: 70px;
+            font-size: 10pt;
+            color: rgba(0,0,0,0.7);
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function copiarTexto() {
+            let textoCopiado = document.getElementById("texto");
+            navigator.clipboard.writeText(textoCopiado.textContent);
+            // navigator.clipboard.readText().then((text)=> {
+            //     console.log("O texto é: " + textoCopiado.textContent);
+            // });
+        }
+    </script>
+    <div class="contain-body">
+        <div class="container w-50">
+            <div class="box">
+                <!-- HEADER -->
+                <div class="header">
+                    <img
+                        src='https://hisegseguranca.com.br/wp-content/uploads/2020/12/hiseg.png'
+                        class="logo"
+                    />
+                    <p class="title">Esse é seu código de acesso</p>
+                </div>
+                <!-- BODY -->
+                <div class="content">
+                    <p class="name">Olá, Wellington!</p>
+                    <p class="content-text">
+                        Para validarmos o acesso ao seu aplicativo com segurança, <span class="bold">use o código abaixo diretamente no app:    </span>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <div class="code">
+                            <p class="user">Usuário: 622.000.555-89</p>
+                            <p id="texto" class="code-text">Senha: Cg5hd1</p>
+                        </div>
+                    </div>
+                    <p class="content-text">
+                        Um lembrete pra você: esse código é de uso <span class="bold">exclusivo seu</span> e só deve ser usado <span class="bold">dentro do aplicativo Hiseg</span>. 
+                        Lembre-se de protegê-lo e não compartilhá-lo com outras pessoas.
+                    </p>
+                </div>
+            </div>
+            <!-- FOOTER -->
+            <div class="footer">
+                <p class="thanks">
+                    Abraços,<br/>
+                    Equipe Hiseg!
+                </p>
+    
+                <p class="content-text">
+                    Tem alguma dúvida? Entre em contato conosco pelo chat do app ou ligue 0800 580 2377.
+                </p>
+    
+                <p class="about">
+                    Hiseg Soluções Tecnológica - R. Carolina Sucupira, 596 - Aldeota, Fortaleza - CE, 60140-120
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
